@@ -21,7 +21,7 @@
 * Copy the URL of the project to the clipboard.
 
 #### Part 3 - Cloning _forked_ repository
-* Clone the repository from **your account** into the `~/dev` directory.
+* Clone the repository from **your account** into the `~/dev` directory (or the parent directory of your repositories).
   * if you do not have a `~/dev` directory, make one by executing the following command:
     * `mkdir ~/dev`
   * navigate to the `~/dev` directory by executing the following command:
@@ -29,7 +29,13 @@
   * clone the project by executing the following command:
     * `git clone https://github.com/${MYUSERNAME}/${NAMEOFPROJECT}`
 
-
+#### Part 4 - Setting upstream remote
+* Link the local repository just created with the original you forked from 
+  * If new content is added to this repository, you can pull the new changes, but the remote 'origin' points to your forked version
+  * Add another remote and call it 'upstream':
+    * `git remote add upstream https://github.com/Java-Full-Stack-TEK/javascript_day-2-exercises`
+  * To pull changes, we tell git to look at the Github upstream remote (pointing here) instead of the origin remote (which points to your fork):
+    * `git pull upstream master`
 
 
 
